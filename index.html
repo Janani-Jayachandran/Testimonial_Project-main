@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Testimonial</title>
+
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!--Bootstrap 5 icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar active">
+        <div class="menu-btn">
+            <i class='bx bxs-chevron-left'></i>
+        </div>
+            <div class="head">
+                <div class="user-img">
+                    <img src="Images/img7.jpg" alt="">
+                </div>
+                <div class="user-details">
+                    <p class="name">Gowri K</p>
+                    <p class="title">Free plan</p>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="menu">
+                    <p class="title">
+                        MENU
+                        
+                    </p>
+                    <ul>
+                        <li name="contact" class="active"><a href="#contact">
+                            <i class='bx bx-folder-open'></i>
+                        <span class="text">Contact</span>
+                        
+                        </a></li>
+                      
+
+                        <li name="import"><a href="form.html"><i class='bx bx-import' ></i>
+                        <span class="text">Import Testimonial</a></span>
+
+                        <!----->
+                        <li ><a href="https://startling-dragon-f517e0.netlify.app/">
+                            <i class='bx bx-game'></i><span class="text">MANAGE</span>
+                        <i class='bx bx-chevron-down arrow'></i>
+                        </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#">
+                                <i class='bx bx-heart'></i>
+                                <span class="text">Testimonials</span>
+                            </a>
+                        </li>
+                      
+                        <li>
+                            <a href="#">
+                                <i class='bx bxl-microsoft-teams'></i>
+                                <span class="text">Teams</span>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    </li>
+                    <!---->
+                   
+                    </a></li>
+                    </ul>
+                </div>
+             
+                <div class="menu">
+                    <p class="title">
+                        AUTOMATE
+                    </p>
+                    <ul>
+                        <li><a href="#">
+                            <i class='bx bx-analyse'></i>
+                        <span class="text">Automate</span>
+                        
+                        </a></li>
+                        </ul>
+                </div>
+                <div class="menu">
+                    <p class="title">
+                        PRODUCT
+                    </p>
+                    <ul>
+                        <li><a href="#">
+                            <i class='bx bx-bell'></i>
+                        <span class="text">What's New</span>
+                        
+                        </a></li>
+                        <li><a href="#">
+                            
+                            <i class='bx bx-coffee-togo'></i>
+                        <span class="text">Feedback</span>
+                        
+                        </a></li>
+                        </ul>
+                </div>
+                <div class="menu">
+                    <p class="title">
+                        Account
+                    </p>
+                    <ul>
+                        <li><a href="#">
+                            <i class='bx bx-help-circle'></i>
+                        <span class="text">Help</span>
+                        
+                        </a></li>
+                        <li><a href="#">
+                            
+                            <i class='bx bx-log-out'></i>
+                        <span class="text">Logout</span>
+                        
+                        </a></li>
+                        </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <main>
+            <div class="card active contact">
+                <div class="title">
+                    Contact Page
+                </div>
+                <section class="p-3">
+                    <div class="row">
+                        <div class="col-12">
+                            <button class="btn btn-primary newUser" data-bs-toggle="modal" data-bs-target="#userForm"> + New Contact <i class="bi bi-people"></i></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <table class="table table-striped table-hover mt-3 text-center table-bordered">
+                             <thead>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Picture</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Mobile NO</th>
+                                   
+                                    <th>Start Date</th>
+                                    <th>Action</th>
+                                    <th>Feedback</th>
+                                   
+                                </tr>
+                             </thead>
+                            <tbody id="data"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+
+<!--Import -->
+
+            <div class="card import">
+                <div class="title">
+                    Import Testimonials
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+
+<!--Modal Forms-->
+<div class="modal fade" id="userForm">
+     <div class="modal-dialog modal-dialog-centered modal-lg">
+<div class="modal-content">
+    <div class="modal-header">
+        <h4 class="modal-title">Fill the Form</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+
+    <div class="modal-body">
+        <form action="#" id="myForm">
+            <div class="card-1 imgholder">
+                <label for="imgInput" class="upload">
+           <input type="file" name="" id="imgInput">
+           <i class="bi bi-plus-circle-dotted"></i>
+                </label>
+            <img src="Images/user-1.jpg" alt="" width="200" height="200" class="img"/>
+            </div>
+            <div class="inputField">
+                <div>
+                    <label for="name">Name :</label>
+                    <input type="text" name="" id="name" required>
+                </div>
+                <div>
+                    <label for="email">E-mail :</label>
+                    <input type="email" name="" id="email" required>
+                </div>
+                <div>
+                    <label for="mobile">Mobile No :</label>
+                    <input type="text" name="" id="mobile"  minlength="11" maxlength="11"  required   >
+                </div>
+                <div>
+                    <label for="sDate">Start Date :</label>
+                    <input type="date" name="" id="sDate" required>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" form="myForm" class="btn btn-primary submit" id="submit">Submit</button>
+    </div>
+
+</div>
+     </div>
+    </div>
+
+
+<!--Read Data Modal-->
+
+<div class="modal fade" id="readData">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+<div class="modal-content">
+   <div class="modal-header">
+       <h4 class="modal-title">Profile</h4>
+       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+   </div>
+
+   <div class="modal-body">
+       <form action="#" id="myForm">
+           <div class="card-1 imgholder">
+              
+           <img src="Images/user-1.jpg" alt="" width="200" height="200" class="showImg"/>
+           </div>
+           <div class="inputField">
+               <div>
+                   <label for="name">Name :</label>
+                   <input type="text" name="" id="showName" disabled required>
+               </div>
+               <div>
+                   <label for="email">E-mail :</label>
+                   <input type="email" name="" id="showEmail" disabled required>
+               </div>
+               <div>
+                   <label for="mobile">Mobile No :</label>
+                   <input type="number" name="" id="showMobile"  minlength="11" maxlength="11"     disabled required>
+               </div>
+               <div>
+                   <label for="sDate">Start Date :</label>
+                   <input type="date" name="" id="showsDate" disabled required>
+               </div>
+           </div>
+       </form>
+   </div>
+  
+
+</div>
+    </div>
+</div>
+
+<button class="sendEmail" id="sendEmail">Send E-mail</button>
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+
+
+<script src="index.js"></script>
+<!---curd functions in js-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<!-- <script src="./database.js"></script> -->
+</body>
+</html>

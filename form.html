@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        form {
+            background: white;
+            padding: 60px;
+            width: 750px;
+            max-width: calc(100% - 60px);
+            border-radius: 5px;
+            height: 100%;
+        }
+
+        .form-element {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+        }
+
+        .form-element span {
+            margin-bottom: 10px;
+        }
+        .closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.alert.success {background-color: #04AA6D;}
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+}
+
+        input,
+        textarea {
+            border: 1px solid #d0d2e2;
+            line-height: 2;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .submit{
+            width: 100%;
+            padding: 20px;
+            color: white;
+            background: #1aaaef;
+            border-radius: 5px;
+            border: none;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        .submit:hover{
+            background-color: #eee;
+            color: #1aaaef;
+            border: 2px solid  #1aaaef;
+            
+        }
+        .alert{
+            display: none;
+        }
+        #panel{
+            position: absolute;
+            margin-top: -500px;
+            margin-bottom: 200%;
+            margin-left: 130px;
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <h1> Your Thoughts of Change </h1>
+        <div class="form-element">
+            <span>Name <span style="color:red;">*</span></span>
+            <input type="text" name="name" id="name" placeholder="Your Name">
+        </div>
+        <div class="form-element">
+            <span>Email <span style="color:red;">*</span></span>
+            <input type="email" name="email" id="email" placeholder="Your Email">
+        </div>
+       
+
+        <div class="form-element">
+            <span>We introduced split and pay option to help students and reduce the burden of money and what do you
+                feel about the value of money spent to join? Share your thoughts! <span style="color:red;">*</span></span> 
+            <textarea name="burden" id="burden" cols="40" rows="1"></textarea>
+        </div>
+
+        <div class="form-element">
+            <span>Will you recommend this to your friends to prepare for the career ? If Yes , why would you
+                recommend ? <span style="color:red;">*</span>
+            </span>
+            <textarea name="career" id="career" cols="40" rows="1"></textarea>
+        </div>
+        <div class="alert success" id="panel">
+            <span class="closebtn">&times;</span>  
+            <strong>Success!</strong> The Form has submitted.
+          </div>
+        <input  class="submit" type="submit" onclick="success()" />
+
+    </form>
+
+    <script src="./feedback.js"></script>
+    <script>
+var close = document.getElementsByClassName("closebtn");
+var i;
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function(){
+          var div = this.parentElement;
+          div.style.opacity = "0";
+          setTimeout(function(){ div.style.display = "none"; }, 600);
+        }
+      }
+      function success() {
+  document.getElementById("panel").style.display = "block";
+}
+      </script>
+</body>
+
+</html>
